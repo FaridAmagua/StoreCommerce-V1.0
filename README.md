@@ -6,7 +6,7 @@
 ## Instalación
 1. Copia la carpeta del script y pégala en la ubicación donde tengas los scripts del servidor.
 2. Crea en la base de datos la tabla necesaria para el funcionamiento del script.
-3. Recarga el plugin para aplicar los cambios realizados (f8 "restart StorreCommerce-v1.0").
+3. Recarga el plugin para aplicar los cambios realizados pulsamos F8 para abrir la consola de administración y ponemos escribimos "restart StorreCommerce-v1.0"
 
 ## Configuración
 config.lua
