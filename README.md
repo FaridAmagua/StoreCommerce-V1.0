@@ -61,7 +61,7 @@ CREATE TABLE tiendas (
 );
 ```
 
-
+Tabla de ejemplo:
 
 ![Ejemplo de la base de datos creada](./Database1.png)
 
