@@ -1,4 +1,4 @@
-# StoreCommerce V1.0 by NFXs
+# StoreCommerce V1.0 by Farid Amagua
 
 ![Funcionamiento](./StoreCommerce.png)
 
@@ -84,7 +84,7 @@ NS Multijob: [Documentación](https://www.docs.nsscripts.com/job-scripts/ns-mult
 
 Este proyecto está bajo la [Licencia MIT](LICENSE).
 
-Copyright [2024] [NFXs]
+Copyright [2024] [Farid Amagua]
 
 Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para tratar el Software sin restricciones, incluidos, entre otros, los derechos de uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta de copias del Software, y para permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
 
