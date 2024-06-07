@@ -46,9 +46,6 @@ No proporcionaré una explicación detallada aquí, ya que hay muchas otras guí
 
 Luego, creamos una tabla tiendas en una base de datos (por ejemplo, usando XAMPP o un gestor de bases de datos). En mi caso, los campos de la tabla son: id_tienda, nombre, precio, disponible, propietario, job, grade, marcador_x, marcador_y, marcador_z. Puedes ajustar los campos según tus preferencias.
 
-![Ejemplo de la base de datos creada](./Database1.png)
-
-
 ```sql
 CREATE TABLE tiendas (
     id_tienda INT AUTO_INCREMENT PRIMARY KEY,
@@ -63,6 +60,10 @@ CREATE TABLE tiendas (
     marcador_z FLOAT 
 );
 ```
+
+
+
+![Ejemplo de la base de datos creada](./Database1.png)
 
 
 Las funciones principales incluyen:
