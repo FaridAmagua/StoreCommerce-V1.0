@@ -2,6 +2,12 @@
 
 ![Funcionamiento](./StoreCommerce.png)
 
+
+## Instalación
+1. Copia la carpeta del script y pégala en la ubicación donde tengas los scripts del servidor.
+2. Crea la base de datos necesaria para el funcionamiento del script.
+3. Recarga el plugin para aplicar los cambios realizados.
+
 ## Configuración
 config.lua
 En este archivo, especifica los nombres, precios, trabajos (compatibles con NS_JOB), y niveles requeridos para las tiendas. Puedes encontrar más detalles en serve.lua en la función ply.Functions.SetJob(_job,_gradejob).
