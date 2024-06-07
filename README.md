@@ -1,4 +1,4 @@
-# StoreCommerce V1.0 by Farid
+# StoreCommerce V1.0 by NFXs
 
 ![Funcionamiento](./StoreCommerce.png)
 
