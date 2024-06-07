@@ -1,5 +1,7 @@
 StoreCommerce V1.0 by Farid
 
+![Funcionamiento](./StoreCommerce.png)
+
 Configuración
 config.lua
 En este archivo, especifica los nombres, precios, trabajos (compatibles con NS_JOB), y niveles requeridos para las tiendas. Puedes encontrar más detalles en serve.lua en la función ply.Functions.SetJob(_job,_gradejob).
@@ -25,7 +27,6 @@ Esta función se ejecuta continuamente en un hilo separado, repitiendo la llamad
 
 Server.lua
 En este archivo, creamos comandos para facilitar a los administradores el registro de las tiendas.
-
 Por ejemplo, tenemos el comando : QBCore.Commands.Add("creartienda", "Crea una nueva tienda"), que recibe los siguientes parámetros:
 {name = "nombre", help = "Nombre de la tienda"},
 {name = "precio", help = "Precio de la tienda"},
@@ -38,6 +39,7 @@ Por ejemplo, tenemos el comando : QBCore.Commands.Add("creartienda", "Crea una n
 No proporcionaré una explicación detallada aquí, ya que hay muchas otras guías disponibles, pero puedes copiar y modificar según tus necesidades.
 
 Luego, creamos una tabla tiendas en una base de datos (por ejemplo, usando XAMPP o un gestor de bases de datos). En mi caso, los campos de la tabla son: id_tienda, nombre, precio, disponible, propietario, job, grade, marcador_x, marcador_y, marcador_z. Puedes ajustar los campos según tus preferencias.
+![Ejemplo de la base de datos creada](./Database1.png)
 
 sql
 Copiar código
@@ -54,8 +56,10 @@ CREATE TABLE tiendas (
     marcador_z FLOAT 
 );
 Las funciones principales incluyen:
+Comprar tienda: Esto inserta datos en la base de datos con la información recogida del cliente utilizando la función GetId de CubeCore. La notificación de QB_Core te informará sobre el éxito de la compra o cualquier fallo. Puedes 
+![Insert en la base de datos](./Database2.png)
 
-Comprar tienda: Esto inserta datos en la base de datos con la información recogida del cliente utilizando la función GetId de CubeCore. La notificación de QB_Core te informará sobre el éxito de la compra o cualquier fallo. Puedes personalizar estas configuraciones según tus preferencias, utilizando otros mods para las notificaciones o configuraciones del servidor, como QB_Notify.
+personalizar estas configuraciones según tus preferencias, utilizando otros mods para las notificaciones o configuraciones del servidor, como QB_Notify.
 La función Citizen.CreateThread(function()) se puede modificar para ajustar el tiempo de actualización de las tiendas y el parseo de los datos.
 
 Por ahora, no tengo planes de futuras actualizaciones, pero estoy abierto a ideas y modificaciones futuras.
