@@ -1,5 +1,4 @@
-StoreCommerce V1.0
-StoreCommerce V1.0 CubeCore
+StoreCommerce V1.0 by Farid
 
 Configuración
 config.lua
