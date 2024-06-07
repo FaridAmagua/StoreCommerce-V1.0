@@ -1,14 +1,14 @@
-StoreCommerce V1.0 by Farid
+# StoreCommerce V1.0 by Farid
 
 ![Funcionamiento](./StoreCommerce.png)
 
-Configuración
+## Configuración
 config.lua
 En este archivo, especifica los nombres, precios, trabajos (compatibles con NS_JOB), y niveles requeridos para las tiendas. Puedes encontrar más detalles en serve.lua en la función ply.Functions.SetJob(_job,_gradejob).
 
 Este script está diseñado para funcionar con trabajos y roles utilizando el plugin NS multijob para simplificar la gestión. Si prefieres utilizar otro sistema de trabajos, puedes modificar el código según tus necesidades.
 
-Client.lua
+### Client.lua
 Marcadores
 Hemos utilizado los marcadores integrados del juego para indicar las posiciones donde los jugadores pueden interactuar y comprar tiendas.
 
@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
 end)
 Esta función se ejecuta continuamente en un hilo separado, repitiendo la llamada a DibujarMarcadoresTiendas en intervalos de tiempo definidos.
 
-Server.lua
+### Server.lua
 En este archivo, creamos comandos para facilitar a los administradores el registro de las tiendas.
 Por ejemplo, tenemos el comando : QBCore.Commands.Add("creartienda", "Crea una nueva tienda"), que recibe los siguientes parámetros:
 {name = "nombre", help = "Nombre de la tienda"},
@@ -39,10 +39,9 @@ Por ejemplo, tenemos el comando : QBCore.Commands.Add("creartienda", "Crea una n
 No proporcionaré una explicación detallada aquí, ya que hay muchas otras guías disponibles, pero puedes copiar y modificar según tus necesidades.
 
 Luego, creamos una tabla tiendas en una base de datos (por ejemplo, usando XAMPP o un gestor de bases de datos). En mi caso, los campos de la tabla son: id_tienda, nombre, precio, disponible, propietario, job, grade, marcador_x, marcador_y, marcador_z. Puedes ajustar los campos según tus preferencias.
+
 ![Ejemplo de la base de datos creada](./Database1.png)
 
-sql
-Copiar código
 CREATE TABLE tiendas (
     id_tienda INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -55,8 +54,10 @@ CREATE TABLE tiendas (
     marcador_y FLOAT ,
     marcador_z FLOAT 
 );
+
 Las funciones principales incluyen:
 Comprar tienda: Esto inserta datos en la base de datos con la información recogida del cliente utilizando la función GetId de CubeCore. La notificación de QB_Core te informará sobre el éxito de la compra o cualquier fallo. Puedes 
+
 ![Insert en la base de datos](./Database2.png)
 
 personalizar estas configuraciones según tus preferencias, utilizando otros mods para las notificaciones o configuraciones del servidor, como QB_Notify.
