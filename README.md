@@ -42,6 +42,8 @@ Luego, creamos una tabla tiendas en una base de datos (por ejemplo, usando XAMPP
 
 ![Ejemplo de la base de datos creada](./Database1.png)
 
+
+```sql
 CREATE TABLE tiendas (
     id_tienda INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -54,6 +56,8 @@ CREATE TABLE tiendas (
     marcador_y FLOAT ,
     marcador_z FLOAT 
 );
+```
+
 
 Las funciones principales incluyen:
 Comprar tienda: Esto inserta datos en la base de datos con la información recogida del cliente utilizando la función GetId de CubeCore. La notificación de QB_Core te informará sobre el éxito de la compra o cualquier fallo. Puedes 
